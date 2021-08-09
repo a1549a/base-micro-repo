@@ -1,8 +1,8 @@
-package com.example.demobase.service;
+package uz.tune.tenge.base.service;
 
-import com.example.demobase.entity.ErrorTranslationEntity;
-import com.example.demobase.model.ErrorTranslationResponse;
-import com.example.demobase.repository.ErrorTranslationRepository;
+import uz.tune.tenge.base.entity.ErrorTranslationEntity;
+import uz.tune.tenge.base.model.ErrorTranslationResponse;
+import uz.tune.tenge.base.repository.ErrorTranslationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;

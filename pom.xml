@@ -8,15 +8,19 @@
         <version>2.5.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>demo-base</name>
-    <description>demo-base</description>
+
+    <groupId>uz.tune.tenge</groupId>
+    <artifactId>base</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>base</name>
+    <description>base dependency</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>
+
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

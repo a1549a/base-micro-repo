@@ -1,9 +1,9 @@
-package com.example.demobase.controller;
+package uz.tune.tenge.base.controller;
 
-import com.example.demobase.exception.ExceptionWithStatusCode;
-import com.example.demobase.model.BaseResponse;
-import com.example.demobase.model.ErrorTranslationResponse;
-import com.example.demobase.service.ErrorTranslationService;
+import uz.tune.tenge.base.exception.ExceptionWithStatusCode;
+import uz.tune.tenge.base.model.BaseResponse;
+import uz.tune.tenge.base.model.ErrorTranslationResponse;
+import uz.tune.tenge.base.service.ErrorTranslationService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

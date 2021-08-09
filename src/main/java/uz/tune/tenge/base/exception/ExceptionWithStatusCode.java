@@ -1,4 +1,4 @@
-package com.example.demobase.exception;
+package uz.tune.tenge.base.exception;
 
 public class ExceptionWithStatusCode extends BaseException{
 

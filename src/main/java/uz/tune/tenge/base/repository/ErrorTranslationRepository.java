@@ -1,6 +1,6 @@
-package com.example.demobase.repository;
+package uz.tune.tenge.base.repository;
 
-import com.example.demobase.entity.ErrorTranslationEntity;
+import uz.tune.tenge.base.entity.ErrorTranslationEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package com.example.demobase.model;
+package uz.tune.tenge.base.model;
 
-import com.example.demobase.entity.ErrorTranslationEntity;
+import uz.tune.tenge.base.entity.ErrorTranslationEntity;
 
 import java.util.List;
 import java.util.UUID;

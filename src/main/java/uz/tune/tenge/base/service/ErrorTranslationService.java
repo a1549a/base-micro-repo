@@ -1,6 +1,6 @@
-package com.example.demobase.service;
+package uz.tune.tenge.base.service;
 
-import com.example.demobase.model.ErrorTranslationResponse;
+import uz.tune.tenge.base.model.ErrorTranslationResponse;
 
 import java.util.List;
 import java.util.UUID;

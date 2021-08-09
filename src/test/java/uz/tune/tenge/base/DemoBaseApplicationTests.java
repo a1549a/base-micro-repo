@@ -1,4 +1,4 @@
-package com.example.demobase;
+package uz.tune.tenge.base;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

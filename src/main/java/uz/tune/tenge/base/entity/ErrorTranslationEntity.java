@@ -1,4 +1,4 @@
-package com.example.demobase.entity;
+package uz.tune.tenge.base.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.demobase.model;
+package uz.tune.tenge.base.model;
 
 import java.util.List;
 import java.util.UUID;

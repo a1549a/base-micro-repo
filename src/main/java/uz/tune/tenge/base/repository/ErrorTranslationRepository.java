@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
@@ -13,5 +14,5 @@ public interface ErrorTranslationRepository extends JpaRepository<ErrorTranslati
 
     List<ErrorTranslationEntity> findAllByMessageKeyIn(Collection<String> messageKey);
 
-    ErrorTranslationEntity findByMessageKey(String messageKey);
+    Optional<ErrorTranslationEntity> findByMessageKey(String messageKey);
 }

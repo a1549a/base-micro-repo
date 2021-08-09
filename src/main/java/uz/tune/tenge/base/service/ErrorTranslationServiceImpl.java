@@ -24,7 +24,13 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
         return ErrorTranslationResponse.of(
                 errorTranslationRepository.findByMessageKey(
                         messageKey
-                )
+                ).orElseGet(() -> new ErrorTranslationEntity(
+                        null,
+                        messageKey,
+                        messageKey,
+                        messageKey,
+                        messageKey
+                ))
         );
     }
 
@@ -48,7 +54,13 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
         return ErrorTranslationResponse.of(
                 errorTranslationRepository.findById(
                         messageRef
-                ).orElseThrow(RuntimeException::new)
+                ).orElseGet(() -> new ErrorTranslationEntity(
+                        messageRef,
+                        null,
+                        null,
+                        null,
+                        null
+                ))
         );
     }
 
@@ -62,7 +74,7 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
 
             String messageKey = messageKeys.get(i);
 
-            if (messageKey.equals(errorTranslationResponses.get(i).getMessageKey())) {
+            if (errorTranslationResponses.size() <= i || messageKey.equals(errorTranslationResponses.get(i).getMessageKey())) {
                 errorTranslationResponses.add(
                         i,
                         ErrorTranslationResponse.of(

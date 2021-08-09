@@ -13,6 +13,14 @@ public class BaseResponse<T> {
     public BaseResponse() {
     }
 
+    public static <T> BaseResponse<T> of(T data){
+        return new BaseResponse<>(data);
+    }
+
+    public static <T> BaseResponse<T> of(T data, List<UUID> errorRef, List<String> errorMessage){
+        return new BaseResponse<>(data, errorRef, errorMessage);
+    }
+
     public BaseResponse(T data) {
         this.data = data;
         this.timestamp = System.currentTimeMillis();

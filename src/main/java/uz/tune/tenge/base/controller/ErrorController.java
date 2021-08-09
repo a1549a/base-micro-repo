@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RestControllerAdvice
+@RestControllerAdvice(basePackages = "uz.tune.tenge")
 public class ErrorController {
 
     @Value("${service.name}")
@@ -73,6 +73,22 @@ public class ErrorController {
 
         return ResponseEntity
                 .status(e.getHttpStatusCode())
+                .body(response);
+    }
+
+    @ExceptionHandler({Throwable.class})
+    public ResponseEntity<BaseResponse<?>> validException(Throwable e, ServletWebRequest webRequest) {
+
+        var errorTranslationResponse = errorTranslationService.getByKey("internal.error");
+
+        var response = new BaseResponse<>(
+                null,
+                List.of(errorTranslationResponse.getMessageRef()),
+                List.of(errorTranslationResponse.getTextUz())
+        );
+
+        return ResponseEntity
+                .status(500)
                 .body(response);
     }
 

@@ -7,11 +7,11 @@ import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.lang.NonNull;
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import uz.tune.tenge.base.model.BaseResponse;
 
-@ControllerAdvice
+@RestControllerAdvice(basePackages = "uz.tune.tenge")
 public class RestFilterAdvice implements ResponseBodyAdvice<Object> {
 
     @Override

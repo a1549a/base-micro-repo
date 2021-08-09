@@ -1,9 +1,9 @@
 package uz.tune.tenge.base.service;
 
+import org.springframework.stereotype.Service;
 import uz.tune.tenge.base.entity.ErrorTranslationEntity;
 import uz.tune.tenge.base.model.ErrorTranslationResponse;
 import uz.tune.tenge.base.repository.ErrorTranslationRepository;
-import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
                 errorTranslationRepository.findByMessageKey(
                         messageKey
                 ).orElseGet(() -> new ErrorTranslationEntity(
-                        null,
+                        UUID.randomUUID(),
                         messageKey,
                         messageKey,
                         messageKey,
@@ -56,10 +56,10 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
                         messageRef
                 ).orElseGet(() -> new ErrorTranslationEntity(
                         messageRef,
-                        null,
-                        null,
-                        null,
-                        null
+                        "undefined",
+                        "undefined",
+                        "undefined",
+                        "undefined"
                 ))
         );
     }
@@ -79,7 +79,7 @@ public class ErrorTranslationServiceImpl implements ErrorTranslationService {
                         i,
                         ErrorTranslationResponse.of(
                                 new ErrorTranslationEntity(
-                                        null,
+                                        UUID.randomUUID(),
                                         messageKey,
                                         messageKey,
                                         messageKey,

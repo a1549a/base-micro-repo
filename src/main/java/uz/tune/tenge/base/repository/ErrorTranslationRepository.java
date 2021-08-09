@@ -1,8 +1,8 @@
 package uz.tune.tenge.base.repository;
 
-import uz.tune.tenge.base.entity.ErrorTranslationEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import uz.tune.tenge.base.entity.ErrorTranslationEntity;
 
 import java.util.Collection;
 import java.util.List;

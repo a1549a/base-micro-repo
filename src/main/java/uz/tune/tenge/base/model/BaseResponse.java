@@ -21,6 +21,10 @@ public class BaseResponse<T> {
         return new BaseResponse<>(data, errorRef, errorMessage);
     }
 
+    public static <T> BaseResponse<T> of(List<UUID> errorRef, List<String> errorMessage){
+        return new BaseResponse<>(errorRef, errorMessage);
+    }
+
     public BaseResponse(T data) {
         this.data = data;
         this.timestamp = System.currentTimeMillis();
@@ -28,6 +32,12 @@ public class BaseResponse<T> {
 
     public BaseResponse(T data, List<UUID> errorRef, List<String> errorMessage) {
         this.data = data;
+        this.errorRef = errorRef;
+        this.errorMessage = errorMessage;
+        this.timestamp = System.currentTimeMillis();
+    }
+
+    public BaseResponse(List<UUID> errorRef, List<String> errorMessage) {
         this.errorRef = errorRef;
         this.errorMessage = errorMessage;
         this.timestamp = System.currentTimeMillis();

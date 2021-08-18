@@ -71,6 +71,7 @@ public class ErrorController {
                 List.of(errorTranslationResponse.getTextUz())
         );
 
+        e.printStackTrace();
         return ResponseEntity
                 .status(e.getHttpStatusCode())
                 .body(response);
@@ -86,6 +87,8 @@ public class ErrorController {
                 List.of(errorTranslationResponse.getMessageRef()),
                 List.of(errorTranslationResponse.getTextUz())
         );
+
+        e.printStackTrace();
 
         return ResponseEntity
                 .status(500)
